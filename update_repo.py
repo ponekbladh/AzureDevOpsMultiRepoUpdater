@@ -2,6 +2,7 @@ import os
 import xml.etree.ElementTree as ET
 from printColor import *
 from config import *
+#from env.config import *
 
 target_nuget_folder = 'Peap'
 target_nuget_file = 'packages.config'

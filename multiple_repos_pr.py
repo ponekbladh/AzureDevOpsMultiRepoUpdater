@@ -11,6 +11,7 @@ from azure.devops.v7_1.git.git_client import GitClient
 from azure.devops.v7_0.git.models import GitPullRequest,ResourceRef
 from msrest.authentication import BasicAuthentication
 from config import *
+#from env.config import *
 from update_repo import execute_changes_on_repo
 from printColor import *
 

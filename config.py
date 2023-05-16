@@ -1,3 +1,9 @@
+# To keep secrets separate, create a empty file in subfolder env called __init__.py
+# Copy config.py into the env folder, add secrets and modify the code to use
+# from env.config import * 
+# instead of 
+# from config import *
+
 #FinOps
 NEW_BUILD_VERSION_FINOPS = '10.0.34 PEAP'
 

@@ -25,19 +25,17 @@ def find_packages_file(target_folder, target_file):
         print_red(f"File '{target_file}' not found in folder '{target_folder}'")
     return file_path
 
-def find_by_attribute_replace_attribute(root, target_attribute, taret_attribute_val, update_attribute, update_attribute_val):
-    # Find the child element with the specific id attribute value
+def find_by_attribute_replace_attribute(root, target_attribute, target_attribute_value, update_attribute, update_attribute_value):
+    # Find the child element with the specific attribute value
     target_element = None
     for child in root:
-        attri_val = child.attrib.get(target_attribute)
-        #if child.attrib.get(target_attribute) == taret_attribute_val:
-        if child.attrib.get(target_attribute) == taret_attribute_val:
+        if child.attrib.get(target_attribute) == target_attribute_value:
             target_element = child
             break
 
     # Update a specific attribute value in the child element
     if target_element is not None:
-        target_element.set(update_attribute, update_attribute_val)
+        target_element.set(update_attribute, update_attribute_value)
 
 def update_nuget_packages(repository_name):
     print_yellow("Updating packages.config for repo %s"%(repository_name))

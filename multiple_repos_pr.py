@@ -145,6 +145,15 @@ def execute_changes_on_multiple_repos():
 
     print_yellow("\n\n\n************************* ALL DONE: *************************\n\n")
 
+def clone_multiple_repos():
+    print_yellow("\n\n\n************************* STARTING REPO CLONE: *************************\n\n")
+    for repository_name in REPOSITORIES_TO_BASE.keys():
+        print_yellow("\n************************* Repository: %s *************************"%(repository_name))
+        os.chdir(WORK_FOLDER)
+        clone_repository(repository_name)
+
+    print_yellow("\n\n\n************************* ALL DONE: *************************\n\n")
+
 def execute_changes_single_repo(repository_name):
     base_branch = REPOSITORIES_TO_BASE.get(repository_name)
     os.chdir(WORK_FOLDER)
@@ -180,5 +189,6 @@ def run_multiple_builds():
 # Main
 print_yellow("\n\n\n************************* STARTING PROCESS: *************************\n\n")
 #run_multiple_builds()
+#clone_multiple_repos()
 #execute_changes_on_multiple_repos()
 #execute_changes_single_repo('reponame')

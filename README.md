@@ -1,6 +1,8 @@
 # Introduction 
 multiple_repos_pr.py can be used to update multiple repos or trigger multiple builds in Azure DevOps. See the bottom lines of the multiple_repos_pr.py for the actions to perform.
 
+Run to install dependencies: pip install -r requirements.txt
+
 Use the config.py file to add your configuration
 
 # References
